@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Perfil"
+            android:icon="@drawable/people"
+            android:id="@+id/perfil"
+            />
+        <item
+            android:title="Mi Carrito"
+            android:icon="@drawable/basket"
+            android:id="@+id/basket"
+            />
+        <item
+            android:title="Mi Favoritos"
+            android:icon="@drawable/favorite"
+            android:id="@+id/favorite"
+            />
+        <item
+            android:title="Codigo de Promos"
+            android:icon="@drawable/code"
+            android:id="@+id/code"
+            />
+        <item
+            android:title="Mis ordenes"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+            android:id="@+id/orders"
+            />
+    </group>
+
+    <item android:title="">
+        <menu android:checkableBehavior="single">
+            <item
+                android:title="Configuraciones"
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:id="@+id/setting"
+                />
+            <item
+                android:title="Soporte"
+                android:icon="@drawable/ic_baseline_headset_mic_24"
+                android:id="@+id/support"
+                />
+        </menu>
+    </item>
+
+</menu>
