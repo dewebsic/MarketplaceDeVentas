@@ -9,14 +9,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import cl.dewebsic.marketplacedeventas.interfaces.IComunationFragments;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IComunationFragments {
 
     //declaramos los componentes
     DrawerLayout drawerLayout;
@@ -93,4 +95,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void iniciarSesion() {
+            Intent next = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(next);
+    }
 }

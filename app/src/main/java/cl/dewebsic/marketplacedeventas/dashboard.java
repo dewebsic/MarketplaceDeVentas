@@ -1,12 +1,19 @@
 package cl.dewebsic.marketplacedeventas;
 
+import android.app.Activity;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import cl.dewebsic.marketplacedeventas.interfaces.IComunationFragments;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +31,11 @@ public class dashboard extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
+    View view;
+    Activity activity;
+    CardView cardSesion;
+    IComunationFragments  comunationFragments;
     public dashboard() {
         // Required empty public constructor
     }
@@ -58,7 +70,31 @@ public class dashboard extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        view =  inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+        cardSesion = view.findViewById(R.id.cardSesion);
+
+        cardSesion.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                comunationFragments.iniciarSesion();
+            }
+        });
+
+                return view;
     }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Activity) {
+            this.activity=(Activity) context;
+            comunationFragments= (IComunationFragments) this.activity;
+        }
+
+    }
+
 }
