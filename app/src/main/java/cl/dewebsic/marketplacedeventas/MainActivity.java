@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
     NavigationView navigationView;
-
+    Fragment fragment = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +36,13 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
         navigationView=findViewById(R.id.nav_view);
 
+        fragment = new dashboard();
+        loadFragment(fragment);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 int id=menuItem.getItemId();
-                Fragment fragment = null;
 
                 //evaluamos las opciones del menu
                 switch (id){
