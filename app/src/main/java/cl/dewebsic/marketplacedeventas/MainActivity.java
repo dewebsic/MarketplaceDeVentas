@@ -106,4 +106,10 @@ public class MainActivity extends AppCompatActivity implements IComunationFragme
         Intent next = new Intent(MainActivity.this, SuperMarketActivity.class);
         startActivity(next);
     }
+    @Override
+    public void librerias()
+    {
+        Intent next = new Intent(MainActivity.this, LibreriaActivity.class);
+        startActivity(next);
+    }
 }
