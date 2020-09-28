@@ -14,7 +14,6 @@ import cl.dewebsic.marketplacedeventas.interfaces.IComunationFragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -99,5 +98,12 @@ public class MainActivity extends AppCompatActivity implements IComunationFragme
     public void iniciarSesion() {
             Intent next = new Intent(MainActivity.this,LoginActivity.class);
             startActivity(next);
+    }
+
+    @Override
+    public void supermercados()
+    {
+        Intent next = new Intent(MainActivity.this, SuperMarketActivity.class);
+        startActivity(next);
     }
 }
