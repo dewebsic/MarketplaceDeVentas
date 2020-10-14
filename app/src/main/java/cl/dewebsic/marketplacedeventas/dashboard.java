@@ -85,9 +85,7 @@ public class dashboard extends Fragment {
                 comunationFragments.iniciarSesion();
             }
         });
-
-
-
+        
         cardSuper.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -103,8 +101,6 @@ public class dashboard extends Fragment {
                 comunationFragments.librerias();
             }
         });
-
-
 
         return view;
     }
