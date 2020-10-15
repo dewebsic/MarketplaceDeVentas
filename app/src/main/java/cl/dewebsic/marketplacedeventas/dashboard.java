@@ -34,7 +34,7 @@ public class dashboard extends Fragment {
 
     View view;
     Activity activity;
-    CardView cardSesion,cardSuper,cardLibreria;
+    CardView cardSesion,cardSuper,cardLibreria,cardConfiguration;
     IComunationFragments  comunationFragments;
     public dashboard() {
         // Required empty public constructor
@@ -77,6 +77,7 @@ public class dashboard extends Fragment {
         cardSesion = view.findViewById(R.id.cardSesion);
         cardSuper = view.findViewById(R.id.cardSuper);
         cardLibreria = view.findViewById(R.id.cardLibrerias);
+        cardConfiguration = view.findViewById(R.id.cardConfiguration);
 
         cardSesion.setOnClickListener(new View.OnClickListener(){
 
@@ -99,6 +100,14 @@ public class dashboard extends Fragment {
             @Override
             public void onClick(View view) {
                 comunationFragments.librerias();
+            }
+        });
+
+        cardConfiguration.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                comunationFragments.support();
             }
         });
 
