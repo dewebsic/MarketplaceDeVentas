@@ -66,6 +66,8 @@ public class MapaTienda extends FragmentActivity implements OnMapReadyCallback {
         }
         mMap.setMyLocationEnabled(true);
 
+        Antut(mMap);
+
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
         LocationManager locationManager = (LocationManager) MapaTienda.this.getSystemService(Context.LOCATION_SERVICE);
@@ -77,7 +79,7 @@ public class MapaTienda extends FragmentActivity implements OnMapReadyCallback {
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(miUbicacion));
                 CameraPosition cameraPosition = new CameraPosition.Builder()
                         .target(miUbicacion)
-                        .zoom(14)
+                        .zoom(16)
                         .bearing(90)
                         .tilt(45)
                         .build();
@@ -100,9 +102,9 @@ public class MapaTienda extends FragmentActivity implements OnMapReadyCallback {
 
             }
         };
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 100000, 0, locationListener);
 
-        Antut(mMap);
+
     }
 
     public void Antut(GoogleMap googleMap){

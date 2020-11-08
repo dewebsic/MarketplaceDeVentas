@@ -12,17 +12,19 @@ public class SuperMarketActivity extends AppCompatActivity {
 
     Button btnRegresar;
     Button btnSearch;
+    Button btnVerMapa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_super_market_main);
 
-        btnSearch = findViewById(R.id.btnSearch);
+
 
         btnRegresar = findViewById(R.id.btnRegresar);
+        btnVerMapa = findViewById(R.id.verMapa);
 
 
-        btnSearch.setOnClickListener(new View.OnClickListener() {
+        btnVerMapa.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
