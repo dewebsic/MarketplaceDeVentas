@@ -12,15 +12,27 @@
         <item name="windowNoTitle">true</item>
 
     </style>
+
     <style name="AppTheme.AppbarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="AppTheme.popUpOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-    <style name="textViewStyle" parent="android:Widget.TextView"
-        >
+
+    <style name="AppTheme.popUpOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="textViewStyle" parent="android:Widget.TextView">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">#fff</item>
     </style>
+
     <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">#AE000000</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
