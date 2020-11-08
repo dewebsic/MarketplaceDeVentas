@@ -41,6 +41,7 @@ public class MapaTienda extends FragmentActivity implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
     }
 
+    /* metodo para obtener la ubicacion en tiempo real */
     private void getLocalizacion() {
         int permiso = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
         if(permiso == PackageManager.PERMISSION_DENIED){
@@ -51,6 +52,7 @@ public class MapaTienda extends FragmentActivity implements OnMapReadyCallback {
         }
     }
 
+    /* Metodo que carga el mapa */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -107,6 +109,7 @@ public class MapaTienda extends FragmentActivity implements OnMapReadyCallback {
 
     }
 
+    /* metodo para crear marcadores en el mapa */
     public void Antut(GoogleMap googleMap){
 
         mMap = googleMap;
