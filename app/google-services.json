@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "668934216425",
+    "firebase_url": "https://marketplacedeventas.firebaseio.com",
+    "project_id": "marketplacedeventas",
+    "storage_bucket": "marketplacedeventas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668934216425:android:538e14342aa33df8422e78",
+        "android_client_info": {
+          "package_name": "cl.dewebsic.marketplacedeventas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668934216425-nj0mj5u22j4q6qkan4bsd4f0t1cnagfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbCi0auZTyKGSr3oxSEZ8y7oxxY__0G-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668934216425-nj0mj5u22j4q6qkan4bsd4f0t1cnagfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

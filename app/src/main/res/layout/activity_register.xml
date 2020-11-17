@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".RegisterActivity"
     android:background="@drawable/back"
     >
     <LinearLayout
@@ -25,12 +25,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Inicio de Sesión"
+            android:text="Registro"
             android:textSize="17sp"
             android:textStyle="bold"/>
-
         <EditText
-            android:id="@+id/usuarioText"
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edtdesign"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/emailText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Usuario"
@@ -47,23 +55,24 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/edtdesign"
             android:inputType="textPassword"/>
+        <EditText
+            android:id="@+id/passwordRepitText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repetir assword"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edtdesign"
+            android:inputType="textPassword"/>
         <Button
+            android:id="@+id/registerBtn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Ingresar"
+            android:text="Registrarse"
             android:textAllCaps="false"
             android:layout_gravity="center"
             android:background="@drawable/btndesign"
             android:layout_marginTop="20dp" />
-        <TextView
-            android:id="@+id/register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="¿No tienes cuenta?,Registrate"
-            android:layout_marginTop="20dp"
-            android:textSize="12sp"
-            android:clickable="true"/>
         <Button
             android:id="@+id/btnRegresar"
             android:layout_width="200dp"
