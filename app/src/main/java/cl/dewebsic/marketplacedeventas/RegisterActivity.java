@@ -71,6 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
         //validamos la confirmacion de password
         if(password.getText().toString().equals(passwordConfirmation.getText().toString())){
 
+            //ingresamos el emial y el correo para crear usuario para la autentifocacion
             mAuth.createUserWithEmailAndPassword(this.email.getText().toString(),this.password.getText().toString())
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -84,10 +85,12 @@ public class RegisterActivity extends AppCompatActivity {
                                 map.put("password", password.getText().toString());
                                 String id = mAuth.getCurrentUser().getUid();
 
+                                // escuhamos el ingreso de de los datos del usuario a registrar
                                 mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task2) {
 
+                                        //validamos si no hubo errores
                                         if(task2.isSuccessful()){
 
                                             Toast.makeText(getApplicationContext(),"Se ha registrado correctamente",Toast.LENGTH_SHORT).show();

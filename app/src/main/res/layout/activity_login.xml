@@ -30,10 +30,10 @@
             android:textStyle="bold"/>
 
         <EditText
-            android:id="@+id/usuarioText"
+            android:id="@+id/emailText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usuario"
+            android:hint="Email"
             android:textSize="12sp"
             android:layout_marginTop="5dp"
             android:background="@drawable/edtdesign"
@@ -48,6 +48,7 @@
             android:background="@drawable/edtdesign"
             android:inputType="textPassword"/>
         <Button
+            android:id="@+id/btnIngresar"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Ingresar"
